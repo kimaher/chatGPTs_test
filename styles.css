@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  #tierlist {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .tier-row {
+    min-height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-top: 1px solid #444;
+    transition: background-color 0.3s;
+  }
+  
+  .tier-row:first-child {
+    border-top: none;
+  }
+  
+  /* Tier Colors */
+  [data-tier="S"] { background-color: #c62828; } /* Red */
+  [data-tier="A"] { background-color: #e65100; } /* Orange */
+  [data-tier="B"] { background-color: #f9a825; } /* Yellow */
+  [data-tier="C"] { background-color: #43a047; } /* Green */
+  [data-tier="D"] { background-color: #1e88e5; } /* Blue */
+  [data-tier="F"] { background-color: #6a1b9a; } /* Purple */
+  
+  #icon-pool {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border: 2px dashed #444;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
+  .draggable-icon {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: grab;
+  }
+  
+  .draggable-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  
+  .draggable-icon:active {
+    cursor: grabbing;
+  }
